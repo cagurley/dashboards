@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+    <!--<style type="text/css">/*<![CDATA[*/
+      /*STYLESHEET HERE*/
+    /*]]>*/</style>-->
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+  </head>
+  <body>
+    <div id="dashboard">
+      <div class="dashsection">
+        <h3 class="dashheader">ID Numbers</h3>
+        <div class="dashrow">
+          <div class="dashitem">
+            <h4 class="dashlabel">
+              PS Student ID:
+            </h4>
+
+            <div class="dashcontent">
+              <strong>{{emplid}}</strong>
+            </div>
+          </div>
+
+          <div class="dashitem">
+            <h4 class="dashlabel">
+              Slate ID:
+            </h4>
+
+            <div class="dashcontent">
+              <strong>{{ref}}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashrow">
+        <div class="dashitem">
+          <strong>PS Student ID:</strong>
+        </div>
+
+        <div class="dashitem">
+          <strong>{{emplid}}</strong>
+        </div>
+
+        <div class="dashitem">
+          <strong>Slate ID:</strong>
+        </div>
+
+        <div class="dashitem">
+          <strong>{{ref}}</strong>
+        </div>
+      </div>
+
+      <div class="dashrow">
+        <div class="dashitem">
+          <strong>PS Student ID:</strong>
+        </div>
+
+        <div class="dashitem">
+          <strong>{{emplid}}</strong>
+        </div>
+
+        <div class="dashitem">
+          <strong>Slate ID:</strong>
+        </div>
+
+        <div class="dashitem">
+          <strong>{{ref}}</strong>
+        </div>
+      </div>
+    </div>
+
+    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+      <tbody>
+        <tr>
+          <td><strong>PS Student ID:</strong></td>
+          <td><strong>{{emplid}}</strong></td>
+          <td><strong>Slate ID:</strong></td>
+          <td><strong>{{ref}}</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Admit Term:</strong></td>
+          <td colspan="3" rowspan="1">{{admit-term}}</td>
+        </tr>
+        <tr>
+          <td><strong>Admit Type:</strong></td>
+          <td colspan="3" rowspan="1">{{admit-type}}</td>
+        </tr>
+        <tr>
+          <td><strong>HS Graduation Date:</strong></td>
+          <td colspan="3" rowspan="1">{{hs-grad-date}}</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><strong>Majors Interest:</strong></td>
+          <td colspan="3" rowspan="1">{% if simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 != null %}{{simple-major}}, {{simple-major-2}}, {{simple-major-3}}, {{simple-major-4}} and {{simple-major-5}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 == null %} {{simple-major}} , {{simple-major-2}}, {{simple-major-3}}, and {{simple-major-4}}{% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 == null %} {{simple-major}}, {{simple-major-2}}, and {{simple-major-3}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 == null %} {{simple-major}} and {{simple-major-2}}{% elsif {{simple-major-2}} == null %}{{simple-major}}{% elsif {{simple-major}} %}Undecided{% endif %}</td>
+        </tr>
+        <tr>
+          <td><strong>Primary Major:</strong></td>
+          <td colspan="3">{{Major-unduplicated}}</td>
+        </tr>
+        <tr>
+          <td><strong>Entry Term:</strong></td>
+          <td colspan="3" rowspan="1">{{admit-term}}</td>
+        </tr>
+        <tr>
+          <td><strong>Admissions Counselor:&nbsp;</strong></td>
+          <td colspan="3" rowspan="1">{{staff-assigned-name}}&nbsp;&nbsp;<br />
+          <a href="mailto:{{staff-assigned-email}}?subject=RE%3A%20{{First}}%20{{Last}}%2C%20ID%20{{emplid}}%20%5BSEND%20SECURE%5D">{{staff-assigned-email}}</a><br />
+          {{staff-assigned-phone}}</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>Email Student:</strong>{% if email-1 != null %}&nbsp; {{email-1}}{% else %}{% endif %}</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>Email Parent:&nbsp;</strong>{% if parent-email-1 != null %}&nbsp; {{parent-email-1}}{% else %}&nbsp; {% endif %}</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>Text Student:</strong>{% if text-phone-1 != %}📱&nbsp; {{text-phone-1}} {% else %}{% endif %}</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>Call Student Mobile:</strong>{% if mobile-phone-1 != null %}<img alt="" src="https://apply.louisville.edu/www/images/phone.gif" style="width: 50px; height: 38px;" />{{mobile-phone-1}}{% else %}{% endif %}</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>Recruiting Categories:</strong> {{recruiting_categories}}</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>PS Comm Codes:</strong> {{ps_comm_code}}</td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Referral Source:</strong> {{referral_source}}</td>
+          <td colspan="2"><strong>Referral Date:&nbsp;</strong>{{Referral-date}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+      <tbody>
+        <tr>
+          <td><strong>ACT Scores</strong></td>
+          <td style="text-align: center;"><strong>Composite</strong></td>
+          <td style="text-align: center;"><strong>Math</strong></td>
+          <td style="text-align: center;"><strong>Science Reasoning</strong></td>
+          <td style="text-align: center;"><strong>Reading</strong></td>
+          <td style="text-align: center;"><strong>English</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Highest Score Achieved</strong></td>
+          <td style="text-align: center;">{{ACT-composite}}</td>
+          <td style="text-align: center;">{{ACT-math}}</td>
+          <td style="text-align: center;">{{ACT-science}}</td>
+          <td style="text-align: center;">{{ACT-reading}}</td>
+          <td style="text-align: center;">{{ACT-english}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+      <tbody>
+        <tr>
+          <td><strong>SAT Scores</strong></td>
+          <td style="text-align: center;"><strong>Total</strong></td>
+          <td style="text-align: center;"><strong>Math</strong></td>
+          <td style="text-align: center;"><strong>Evidence Based Reading/Writing</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Highest Score Achieved</strong></td>
+          <td style="text-align: center;">{{SAT-total}}</td>
+          <td style="text-align: center;">{{SAT-math}}</td>
+          <td style="text-align: center;">{{SAT-erws}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

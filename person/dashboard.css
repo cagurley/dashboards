@@ -1,0 +1,29 @@
+#dashboard {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#dashboard * {
+  box-sizing: border-box;
+}
+
+.dashsection, .dashcontent {
+  width: 100%;
+  color: #333;
+}
+
+.dashheader, .dashlabel {
+  width: 100%;
+  color: #666;
+}
+
+.dashrow {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.dashitem {
+  flex: 1;
+  min-width: 200px;
+}
