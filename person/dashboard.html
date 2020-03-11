@@ -11,65 +11,81 @@
     <div id="dashboard">
       <div class="dashsection">
         <h3 class="dashheader">ID Numbers</h3>
-        <div class="dashrow">
-          <div class="dashitem">
-            <h4 class="dashlabel">
-              PS Student ID:
-            </h4>
-
-            <div class="dashcontent">
-              <strong>{{emplid}}</strong>
+        <div class="dashbody">
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                PS Student ID
+              </div>
+              <div class="dashcontent">
+                {{emplid}}
+              </div>
             </div>
-          </div>
-
-          <div class="dashitem">
-            <h4 class="dashlabel">
-              Slate ID:
-            </h4>
-
-            <div class="dashcontent">
-              <strong>{{ref}}</strong>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Slate ID
+              </div>
+              <div class="dashcontent">
+                {{ref}}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="dashrow">
-        <div class="dashitem">
-          <strong>PS Student ID:</strong>
-        </div>
-
-        <div class="dashitem">
-          <strong>{{emplid}}</strong>
-        </div>
-
-        <div class="dashitem">
-          <strong>Slate ID:</strong>
-        </div>
-
-        <div class="dashitem">
-          <strong>{{ref}}</strong>
-        </div>
-      </div>
-
-      <div class="dashrow">
-        <div class="dashitem">
-          <strong>PS Student ID:</strong>
-        </div>
-
-        <div class="dashitem">
-          <strong>{{emplid}}</strong>
-        </div>
-
-        <div class="dashitem">
-          <strong>Slate ID:</strong>
-        </div>
-
-        <div class="dashitem">
-          <strong>{{ref}}</strong>
+      <div class="dashsection">
+        <h3 class="dashheader">Prospect Info</h3>
+        <div class="dashbody">
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                Admit Term
+              </div>
+              <div class="dashcontent">
+                {{admit-term}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Admit Type
+              </div>
+              <div class="dashcontent">
+                {{admit-type}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                HS Grad Date
+              </div>
+              <div class="dashcontent">
+                {{hs-grad-date}}
+              </div>
+            </div>
+          </div>
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                Major Interests
+              </div>
+              <div class="dashcontent">
+                {% if simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 != null %}{{simple-major}}, {{simple-major-2}}, {{simple-major-3}}, {{simple-major-4}} and {{simple-major-5}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 == null %} {{simple-major}} , {{simple-major-2}}, {{simple-major-3}}, and {{simple-major-4}}{% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 == null %} {{simple-major}}, {{simple-major-2}}, and {{simple-major-3}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 == null %} {{simple-major}} and {{simple-major-2}}{% elsif {{simple-major-2}} == null %}{{simple-major}}{% elsif {{simple-major}} %}Undecided{% endif %}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Primary Major
+              </div>
+              <div class="dashcontent">
+                {{Major-unduplicated}}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!--<script type="text/javascript">/*<![CDATA[*/
+      /*SCRIPT HERE*/
+    /*]]>*/</script>-->
+    <script type="text/javascript" src="dashboard.js"></script>
 
     <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
       <tbody>
