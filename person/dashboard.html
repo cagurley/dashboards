@@ -81,6 +81,194 @@
           </div>
         </div>
       </div>
+      <div class="dashsection">
+        <h3 class="dashheader">Admissions Counselor</h3>
+        <div class="dashbody">
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                Name
+              </div>
+              <div class="dashcontent">
+                {{staff-assigned-name}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Email
+              </div>
+              <div class="dashcontent">
+                <a href="mailto:{{staff-assigned-email}}?subject=%5BSEND%20SECURE%5D%20RE%3A%20{{First}}%20{{Last}}%2C%20Ref%3A%20{{emplid}}">{{staff-assigned-email}}</a>
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Phone
+              </div>
+              <div class="dashcontent">
+                <a href="tel:{{staff-assigned-phone}}">{{staff-assigned-phone}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashsection">
+        <h3 class="dashheader">Contact</h3>
+        <div class="dashbody">
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                Email
+              </div>
+              <div class="dashcontent">
+                <a href="#" data-href="/manage/lookup/message?cmd=compose&person={{id}}&recipient={{email-1}}" onclick="return (FW.Lazy.Popup(this));">{{email-1}}</a>
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Mobile
+              </div>
+              <div class="dashcontent">
+                <a href="#" data-href="/manage/lookup/message?cmd=compose&person={{id}}&recipient={{mobile-phone-1 | url_encode}}&method=sms" onclick="return (FW.Lazy.Popup(this));">{{mobile-phone-1}}</a>
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Text Permission
+              </div>
+              <div class="dashcontent">
+                {{text-permission}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Parent Email
+              </div>
+              <div class="dashcontent">
+                {{parent-email-1}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashsection">
+        <h3 class="dashheader">Recruiting Details</h3>
+        <div class="dashbody">
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                Recruiting Categories
+              </div>
+              <div class="dashcontent">
+                {{recruiting_categories}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                PS Comm Codes
+              </div>
+              <div class="dashcontent">
+                {{ps_comm_code}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Referral Source
+              </div>
+              <div class="dashcontent">
+                {{referral_source}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Referral Date
+              </div>
+              <div class="dashcontent">
+                {{Referral-date}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashsection">
+        <h3 class="dashheader">Max Verified ACT Components</h3>
+        <div class="dashbody">
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                Composite
+              </div>
+              <div class="dashcontent">
+                {{ACT-composite}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Math
+              </div>
+              <div class="dashcontent">
+                {{ACT-math}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Reading
+              </div>
+              <div class="dashcontent">
+                {{ACT-reading}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                English
+              </div>
+              <div class="dashcontent">
+                {{ACT-english}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Science Reasoning
+              </div>
+              <div class="dashcontent">
+                {{ACT-science}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashsection">
+        <h3 class="dashheader">Max Verified SAT Components</h3>
+        <div class="dashbody">
+          <div class="dashrow">
+            <div class="dashitem">
+              <div class="dashlabel">
+                Total
+              </div>
+              <div class="dashcontent">
+                {{SAT-total}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Math
+              </div>
+              <div class="dashcontent">
+                {{SAT-math}}
+              </div>
+            </div>
+            <div class="dashitem">
+              <div class="dashlabel">
+                Evidence-Based Reading and Writing
+              </div>
+              <div class="dashcontent">
+                {{SAT-erws}}
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--<script type="text/javascript">/*<![CDATA[*/
       /*SCRIPT HERE*/
