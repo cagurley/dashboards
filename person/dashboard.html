@@ -9,260 +9,260 @@
   </head>
   <body>
     <div id="dashboard">
-      <div class="dashsection">
-        <h3 class="dashheader">ID Numbers</h3>
-        <div class="dashbody">
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+      <!--<div class="dash-section">
+        <h3 class="dash-header">ID Numbers</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
                 PS Student ID
               </div>
-              <div class="dashcontent">
+              <div class="dash-content">
                 {{emplid}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Slate ID
               </div>
-              <div class="dashcontent">
+              <div class="dash-content">
                 {{ref}}
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="dashsection">
-        <h3 class="dashheader">Prospect Info</h3>
-        <div class="dashbody">
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+      </div>-->
+      <div class="dash-section">
+        <h3 class="dash-header">Prospect Info</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
+                PS Student ID
+              </div>
+              <div class="dash-content">
+                {{emplid}}
+              </div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">
                 Admit Term
               </div>
-              <div class="dashcontent">
-                {{admit-term}}
+              <div class="dash-content">
+                {{admit_term}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Admit Type
               </div>
-              <div class="dashcontent">
-                {{admit-type}}
+              <div class="dash-content">
+                {{admit_type}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 HS Grad Date
               </div>
-              <div class="dashcontent">
-                {{hs-grad-date}}
+              <div class="dash-content">
+                {{hs_grad_date}}
               </div>
             </div>
           </div>
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
                 Major Interests
               </div>
-              <div class="dashcontent">
-                {% if simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 != null %}{{simple-major}}, {{simple-major-2}}, {{simple-major-3}}, {{simple-major-4}} and {{simple-major-5}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 == null %} {{simple-major}} , {{simple-major-2}}, {{simple-major-3}}, and {{simple-major-4}}{% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 == null %} {{simple-major}}, {{simple-major-2}}, and {{simple-major-3}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 == null %} {{simple-major}} and {{simple-major-2}}{% elsif {{simple-major-2}} == null %}{{simple-major}}{% elsif {{simple-major}} %}Undecided{% endif %}
-              </div>
-            </div>
-            <div class="dashitem">
-              <div class="dashlabel">
-                Primary Major
-              </div>
-              <div class="dashcontent">
-                {{Major-unduplicated}}
+              <div class="dash-content">
+                {{majors}}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="dashsection">
-        <h3 class="dashheader">Admissions Counselor</h3>
-        <div class="dashbody">
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+      <div class="dash-section">
+        <h3 class="dash-header">Admissions Counselor</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
                 Name
               </div>
-              <div class="dashcontent">
-                {{staff-assigned-name}}
+              <div class="dash-content">
+                {{staff_name}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Email
               </div>
-              <div class="dashcontent">
-                <a href="mailto:{{staff-assigned-email}}?subject=%5BSEND%20SECURE%5D%20RE%3A%20{{First}}%20{{Last}}%2C%20Ref%3A%20{{emplid}}">{{staff-assigned-email}}</a>
+              <div class="dash-content">
+                <a href="mailto:{{staff_email}}?subject=%5BSEND%20SECURE%5D%20RE%3A%20{{first}}%20{{last}}%2C%20Ref%3A%20{{ref}}">{{staff_email}}</a>
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Phone
               </div>
-              <div class="dashcontent">
-                <a href="tel:{{staff-assigned-phone}}">{{staff-assigned-phone}}</a>
+              <div class="dash-content">
+                <a href="tel:{{staff_phone}}">{{staff_phone}}</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="dashsection">
-        <h3 class="dashheader">Contact</h3>
-        <div class="dashbody">
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+      <div class="dash-section">
+        <h3 class="dash-header">Contact</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
                 Email
               </div>
-              <div class="dashcontent">
-                <a href="#" data-href="/manage/lookup/message?cmd=compose&person={{id}}&recipient={{email-1}}" onclick="return (FW.Lazy.Popup(this));">{{email-1}}</a>
+              <div class="dash-content">
+                <a href="#" data-href="/manage/lookup/message?cmd=compose&person={{id}}&recipient={{email}}" onclick="return (FW.Lazy.Popup(this));">{{email}}</a>
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Mobile
               </div>
-              <div class="dashcontent">
-                <a href="#" data-href="/manage/lookup/message?cmd=compose&person={{id}}&recipient={{mobile-phone-1 | url_encode}}&method=sms" onclick="return (FW.Lazy.Popup(this));">{{mobile-phone-1}}</a>
+              <div class="dash-content">
+                <a href="#" data-href="/manage/lookup/message?cmd=compose&person={{id}}&recipient={{mobile | url_encode}}&method=sms" onclick="return (FW.Lazy.Popup(this));">{{mobile}}</a>
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Text Permission
               </div>
-              <div class="dashcontent">
-                {{text-permission}}
+              <div class="dash-content">
+                {{text_permission}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Parent Email
               </div>
-              <div class="dashcontent">
-                {{parent-email-1}}
+              <div class="dash-content">
+                {{parent_email_1}}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="dashsection">
-        <h3 class="dashheader">Recruiting Details</h3>
-        <div class="dashbody">
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+      <div class="dash-section">
+        <h3 class="dash-header">Recruiting Details</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
                 Recruiting Categories
               </div>
-              <div class="dashcontent">
+              <div class="dash-content">
                 {{recruiting_categories}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <!--<div class="dash-item">
+              <div class="dash-label">
                 PS Comm Codes
               </div>
-              <div class="dashcontent">
-                {{ps_comm_code}}
+              <div class="dash-content">
+                {{ps_comm_codes}}
               </div>
-            </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            </div>-->
+            <div class="dash-item">
+              <div class="dash-label">
                 Referral Source
               </div>
-              <div class="dashcontent">
+              <div class="dash-content">
                 {{referral_source}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Referral Date
               </div>
-              <div class="dashcontent">
-                {{Referral-date}}
+              <div class="dash-content">
+                {{referral_date}}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="dashsection">
-        <h3 class="dashheader">Max Verified ACT Components</h3>
-        <div class="dashbody">
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+      <div id="dash-act" class="dash-section">
+        <h3 class="dash-header">Max Verified ACT Components</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
                 Composite
               </div>
-              <div class="dashcontent">
-                {{ACT-composite}}
+              <div class="dash-content">
+                {{act_comp}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Math
               </div>
-              <div class="dashcontent">
-                {{ACT-math}}
+              <div class="dash-content">
+                {{act_math}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Reading
               </div>
-              <div class="dashcontent">
-                {{ACT-reading}}
+              <div class="dash-content">
+                {{act_read}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 English
               </div>
-              <div class="dashcontent">
-                {{ACT-english}}
+              <div class="dash-content">
+                {{act_engl}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Science Reasoning
               </div>
-              <div class="dashcontent">
-                {{ACT-science}}
+              <div class="dash-content">
+                {{act_scire}}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="dashsection">
-        <h3 class="dashheader">Max Verified SAT Components</h3>
-        <div class="dashbody">
-          <div class="dashrow">
-            <div class="dashitem">
-              <div class="dashlabel">
+      <div id="dash-satr" class="dash-section">
+        <h3 class="dash-header">Max Verified SAT Components</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">
                 Total
               </div>
-              <div class="dashcontent">
-                {{SAT-total}}
+              <div class="dash-content">
+                {{sat_total}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Math
               </div>
-              <div class="dashcontent">
-                {{SAT-math}}
+              <div class="dash-content">
+                {{sat_math}}
               </div>
             </div>
-            <div class="dashitem">
-              <div class="dashlabel">
+            <div class="dash-item">
+              <div class="dash-label">
                 Evidence-Based Reading and Writing
               </div>
-              <div class="dashcontent">
-                {{SAT-erws}}
+              <div class="dash-content">
+                {{sat_erws}}
               </div>
             </div>
             </div>
@@ -274,110 +274,5 @@
       /*SCRIPT HERE*/
     /*]]>*/</script>-->
     <script type="text/javascript" src="dashboard.js"></script>
-
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td><strong>PS Student ID:</strong></td>
-          <td><strong>{{emplid}}</strong></td>
-          <td><strong>Slate ID:</strong></td>
-          <td><strong>{{ref}}</strong></td>
-        </tr>
-        <tr>
-          <td><strong>Admit Term:</strong></td>
-          <td colspan="3" rowspan="1">{{admit-term}}</td>
-        </tr>
-        <tr>
-          <td><strong>Admit Type:</strong></td>
-          <td colspan="3" rowspan="1">{{admit-type}}</td>
-        </tr>
-        <tr>
-          <td><strong>HS Graduation Date:</strong></td>
-          <td colspan="3" rowspan="1">{{hs-grad-date}}</td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td colspan="3">&nbsp;</td>
-        </tr>
-        <tr>
-          <td><strong>Majors Interest:</strong></td>
-          <td colspan="3" rowspan="1">{% if simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 != null %}{{simple-major}}, {{simple-major-2}}, {{simple-major-3}}, {{simple-major-4}} and {{simple-major-5}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 != null and simple-major-5 == null %} {{simple-major}} , {{simple-major-2}}, {{simple-major-3}}, and {{simple-major-4}}{% elsif simple-major != null and simple-major-2 != null and simple-major-3 != null and simple-major-4 == null %} {{simple-major}}, {{simple-major-2}}, and {{simple-major-3}} {% elsif simple-major != null and simple-major-2 != null and simple-major-3 == null %} {{simple-major}} and {{simple-major-2}}{% elsif {{simple-major-2}} == null %}{{simple-major}}{% elsif {{simple-major}} %}Undecided{% endif %}</td>
-        </tr>
-        <tr>
-          <td><strong>Primary Major:</strong></td>
-          <td colspan="3">{{Major-unduplicated}}</td>
-        </tr>
-        <tr>
-          <td><strong>Entry Term:</strong></td>
-          <td colspan="3" rowspan="1">{{admit-term}}</td>
-        </tr>
-        <tr>
-          <td><strong>Admissions Counselor:&nbsp;</strong></td>
-          <td colspan="3" rowspan="1">{{staff-assigned-name}}&nbsp;&nbsp;<br />
-          <a href="mailto:{{staff-assigned-email}}?subject=RE%3A%20{{First}}%20{{Last}}%2C%20ID%20{{emplid}}%20%5BSEND%20SECURE%5D">{{staff-assigned-email}}</a><br />
-          {{staff-assigned-phone}}</td>
-        </tr>
-        <tr>
-          <td colspan="4"><strong>Email Student:</strong>{% if email-1 != null %}&nbsp; {{email-1}}{% else %}{% endif %}</td>
-        </tr>
-        <tr>
-          <td colspan="4"><strong>Email Parent:&nbsp;</strong>{% if parent-email-1 != null %}&nbsp; {{parent-email-1}}{% else %}&nbsp; {% endif %}</td>
-        </tr>
-        <tr>
-          <td colspan="4"><strong>Text Student:</strong>{% if text-phone-1 != %}📱&nbsp; {{text-phone-1}} {% else %}{% endif %}</td>
-        </tr>
-        <tr>
-          <td colspan="4"><strong>Call Student Mobile:</strong>{% if mobile-phone-1 != null %}<img alt="" src="https://apply.louisville.edu/www/images/phone.gif" style="width: 50px; height: 38px;" />{{mobile-phone-1}}{% else %}{% endif %}</td>
-        </tr>
-        <tr>
-          <td colspan="4"><strong>Recruiting Categories:</strong> {{recruiting_categories}}</td>
-        </tr>
-        <tr>
-          <td colspan="4"><strong>PS Comm Codes:</strong> {{ps_comm_code}}</td>
-        </tr>
-        <tr>
-          <td colspan="2"><strong>Referral Source:</strong> {{referral_source}}</td>
-          <td colspan="2"><strong>Referral Date:&nbsp;</strong>{{Referral-date}}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td><strong>ACT Scores</strong></td>
-          <td style="text-align: center;"><strong>Composite</strong></td>
-          <td style="text-align: center;"><strong>Math</strong></td>
-          <td style="text-align: center;"><strong>Science Reasoning</strong></td>
-          <td style="text-align: center;"><strong>Reading</strong></td>
-          <td style="text-align: center;"><strong>English</strong></td>
-        </tr>
-        <tr>
-          <td><strong>Highest Score Achieved</strong></td>
-          <td style="text-align: center;">{{ACT-composite}}</td>
-          <td style="text-align: center;">{{ACT-math}}</td>
-          <td style="text-align: center;">{{ACT-science}}</td>
-          <td style="text-align: center;">{{ACT-reading}}</td>
-          <td style="text-align: center;">{{ACT-english}}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td><strong>SAT Scores</strong></td>
-          <td style="text-align: center;"><strong>Total</strong></td>
-          <td style="text-align: center;"><strong>Math</strong></td>
-          <td style="text-align: center;"><strong>Evidence Based Reading/Writing</strong></td>
-        </tr>
-        <tr>
-          <td><strong>Highest Score Achieved</strong></td>
-          <td style="text-align: center;">{{SAT-total}}</td>
-          <td style="text-align: center;">{{SAT-math}}</td>
-          <td style="text-align: center;">{{SAT-erws}}</td>
-        </tr>
-      </tbody>
-    </table>
   </body>
 </html>

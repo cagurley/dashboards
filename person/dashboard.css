@@ -7,40 +7,40 @@
   border-radius: 5px;
 }
 
-#dashboard * {
+#dash-board * {
   box-sizing: border-box;
   width: 100%;
 }
 
-.dashsection {
+.dash-section {
   padding: 10px;
   border: 1px solid #666;
   border-radius: 5px;
 }
 
-.dashheader {
+.dash-header {
   color: #666;
   padding-bottom: 5px;
   margin: 0;
   border-bottom: 1px solid #666;
 }
 
-.dashrow {
+.dash-row {
   display: flex;
   flex-flow: row wrap;
 }
 
-.dashitem {
+.dash-item {
   flex: 0 0 100%;
   max-width: 100%;
   margin-top: 10px;
 }
 
-.dashlabel {
+.dash-label {
   color: #666;
 }
 
-.dashcontent {
+.dash-content {
   padding: 2.5px;
   border: 1px solid #333;
   border-radius: 2.5px;
