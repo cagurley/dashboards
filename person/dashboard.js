@@ -5,3 +5,10 @@ $('.dash-content').each(function () {
   }
 });
 $('.dash-header').click(function () { $(this).next().toggle(); });
+$('.dash-header').on('mouseover mouseout', function () {
+  $(this).parent().toggleClass('dash-ic');
+});
+$('.dash-header').on('mousedown mouseup', function () {
+  $(this).parent().toggleClass('dash-tl');
+});
+$('#dash-recdet .dash-body').hide();

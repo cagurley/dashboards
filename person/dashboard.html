@@ -5,10 +5,10 @@
     <!--<style type="text/css">/*<![CDATA[*/
       /*STYLESHEET HERE*/
     /*]]>*/</style>-->
-    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link type="text/css" rel="stylesheet" href="dashboard.css">
   </head>
   <body>
-    <div id="dashboard">
+    <div class="dash">
       <!--<div class="dash-section">
         <h3 class="dash-header">ID Numbers</h3>
         <div class="dash-body">
@@ -151,7 +151,7 @@
           </div>
         </div>
       </div>
-      <div class="dash-section">
+      <div class="dash-section" id="dash-recdet">
         <h3 class="dash-header">Recruiting Details</h3>
         <div class="dash-body">
           <div class="dash-row">
@@ -190,7 +190,8 @@
           </div>
         </div>
       </div>
-      <div id="dash-act" class="dash-section">
+      {% if act_exists %}
+      <div class="dash-section" id="dash-act">
         <h3 class="dash-header">Max Verified ACT Components</h3>
         <div class="dash-body">
           <div class="dash-row">
@@ -237,7 +238,9 @@
           </div>
         </div>
       </div>
-      <div id="dash-satr" class="dash-section">
+      {% endif %}
+      {% if satr_exists %}
+      <div class="dash-section" id="dash-satr">
         <h3 class="dash-header">Max Verified SAT Components</h3>
         <div class="dash-body">
           <div class="dash-row">
@@ -265,11 +268,15 @@
                 {{sat_erws}}
               </div>
             </div>
-            </div>
           </div>
         </div>
       </div>
+      {% endif %}
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
     <!--<script type="text/javascript">/*<![CDATA[*/
       /*SCRIPT HERE*/
     /*]]>*/</script>-->
