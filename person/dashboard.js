@@ -12,4 +12,22 @@ $('.dash-header').on('mousedown mouseup', function () {
   $(this).parent().toggleClass('dash-tl');
 });
 $('#dash-recdet .dash-body').hide();
-// if (window.matchMedia('(max-width: 575px)')) {}
+if (window.matchMedia('(max-width: 575px)').matches) {
+  var re = /^\/manage\/lookup\/message\?cmd=compose&person=.+?&recipient=(.+?)(&.+)?$/;
+  $('.dash-popph').each(function () {
+    var matches = $(this).attr('data-href').match(re);
+    if (matches[1]) {
+      $(this).removeAttr('onclick');
+      $(this).attr('href', 'tel:' + matches[1]);
+      $(this).removeAttr('data-href');
+    }
+  });
+  $('.dash-popem').each(function () {
+    var matches = $(this).attr('data-href').match(re);
+    if (matches[1]) {
+      $(this).removeAttr('onclick');
+      $(this).attr('href', 'mailto:' + matches[1]);
+      $(this).removeAttr('data-href');
+    }
+  });
+}
