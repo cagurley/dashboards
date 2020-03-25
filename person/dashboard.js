@@ -30,4 +30,6 @@ if (window.matchMedia('(max-width: 575px)').matches) {
       $(this).removeAttr('data-href');
     }
   });
+} else if ($('#dash-tp').text().toLowerCase() !== 'yes') {
+  $('#dash-mob').html($('#dash-mob').text());
 }
