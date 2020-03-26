@@ -60,6 +60,11 @@
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
+              <a href="/manage/lookup/record?id={{app1_guid|url_encode}}">Jump to App</a>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-item">
               <div class="dash-label">PS Student ID</div>
               <div class="dash-content">{{emplid}}</div>
             </div>
@@ -93,6 +98,11 @@
       <div class="dash-section">
         <h3 class="dash-header">Top-Ranked School</h3>
         <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <a href="/manage/lookup/record?id={{id|url_encode}}&tab=Profile%2fSchools">Jump to School</a>
+            </div>
+          </div>
           <div class="dash-row">
             <div class="dash-item fsl-12 fxl-6">
               <div class="dash-label">Name</div>
@@ -159,6 +169,11 @@
         <h3 class="dash-header">Contact</h3>
         <div class="dash-body">
           <div class="dash-row">
+            <div class="dash-item">
+              <a href="/manage/lookup/record?id={{id|url_encode}}&tab=Profile%2fContact">Jump to Contact</a>
+            </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item fsl-4 fxl-3">
               <div class="dash-label">Text Permission</div>
               <div class="dash-content" id="dash-tp">{{text_permission}}</div>
@@ -197,6 +212,11 @@
         <h3 class="dash-header">Max Verified ACT Components</h3>
         <div class="dash-body">
           <div class="dash-row">
+            <div class="dash-item">
+              <a href="/manage/lookup/record?id={{id|url_encode}}&tab=Profile%2fScores">Jump to Scores</a>
+            </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item fsl-12">
               <div class="dash-label">Composite</div>
               <div class="dash-content">{{act_comp}}</div>
@@ -224,6 +244,11 @@
       {% if satr_exists %}
       <div class="dash-section" id="dash-satr">
         <h3 class="dash-header">Max Verified SAT Components</h3>
+        <div class="dash-row">
+          <div class="dash-item">
+            <a href="/manage/lookup/record?id={{id|url_encode}}&tab=Profile%2fScores">Jump to Scores</a>
+          </div>
+        </div>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item fsl-12">
