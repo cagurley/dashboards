@@ -9,30 +9,9 @@
   </head>
   <body>
     <div class="dash">
-      <!--<div class="dash-section">
-        <h3 class="dash-header">ID Numbers</h3>
-        <div class="dash-body">
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">PS Student ID</div>
-              <div class="dash-content">{{emplid}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Slate ID</div>
-              <div class="dash-content">{{ref}}</div>
-            </div>
-          </div>
-        </div>
-      </div>-->
       <div class="dash-section">
         <h3 class="dash-header">Prospect Info</h3>
         <div class="dash-body">
-          <!-- <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">PS Student ID</div>
-              <div class="dash-content">{{emplid}}</div>
-            </div>
-          </div> -->
           <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Admit Term</div>
@@ -61,6 +40,7 @@
           </div>
         </div>
       </div>
+      {% if app1_guid %}
       <div class="dash-section">
         <h3 class="dash-header">Top-Ranked App</h3>
         <div class="dash-body">
@@ -101,6 +81,8 @@
           </div>
         </div>
       </div>
+      {% endif %}
+      {% if school1_guid %}
       <div class="dash-section">
         <h3 class="dash-header">Top-Ranked School</h3>
         <div class="dash-body">
@@ -143,6 +125,7 @@
           </div>
         </div>
       </div>
+      {% endif %}
       <div class="dash-section">
         <h3 class="dash-header">Admissions Counselor</h3>
         <div class="dash-body">
@@ -163,7 +146,6 @@
               <div class="dash-label">Email</div>
               <div class="dash-content">
                 <a class="dash-popem break-all" href="#" data-href="/manage/lookup/message?cmd=compose&person={{id|url_encode}}&recipient={{staff_email|url_encode}}" onclick="return (FW.Lazy.Popup(this));">
-                <!-- <a class="break-all" href="mailto:{{staff_email|url_encode}}?subject=RE%3A%20{{first|url_encode}}%20{{last|url_encode}}%2C%20Ref%3A%20{{ref|url_encode}}"> -->
                   {{staff_email}}
                 </a>
               </div>
@@ -277,31 +259,6 @@
         </div>
       </div>
       {% endif %}
-      <!--<div class="dash-section" id="dash-recdet">
-        <h3 class="dash-header">Recruiting Details</h3>
-        <div class="dash-body">
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">Recruiting Categories</div>
-              <div class="dash-content">{{recruiting_categories}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">PS Comm Codes</div>
-              <div class="dash-content">{{ps_comm_codes}}</div>
-            </div>
-          </div>
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">Referral Source</div>
-              <div class="dash-content">{{referral_source}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Referral Date</div>
-              <div class="dash-content">{{referral_date}}</div>
-            </div>
-          </div>
-        </div>
-      </div>-->
     </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
