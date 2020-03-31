@@ -73,7 +73,7 @@
   opacity: 0.75;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
   .dash-item {
     flex: 1 0 0;
   }
@@ -91,13 +91,13 @@
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .dash-item {
     flex: 0 0 100%;
   }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
   .dash-item {
     flex: 1 0 0;
   }
@@ -115,7 +115,7 @@
   }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
   .fxl-6 {
     flex: 0 0 50%;
   }
