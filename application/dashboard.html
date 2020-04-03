@@ -18,10 +18,6 @@
               <div class="dash-content">{{emplid}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">Slate ID</div>
-              <div class="dash-content">{{ref}}</div>
-            </div>
-            <div class="dash-item">
               <div class="dash-label">PeopleSoft Application Number</div>
               <div class="dash-content">{{adm_appl_nbr}}</div>
             </div>
@@ -49,10 +45,10 @@
               <div class="dash-label">Admit Term</div>
               <div class="dash-content">{{admit_term}}</div>
             </div>
-            <div class="dash-item">
+            <!--<div class="dash-item">
               <div class="dash-label">Admit Type</div>
               <div class="dash-content">{{admit_type}}</div>
-            </div>
+            </div>-->
             <div class="dash-item">
               <div class="dash-label">MUSIC</div>
               <div class="dash-content">{{music_instrument_type}}</div>
@@ -85,10 +81,10 @@
               <div class="dash-label">Last Updated</div>
               <div class="dash-content">{{updated}}</div>
             </div>
-            <div class="dash-item">
+            <!--<div class="dash-item">
               <div class="dash-label">Academic Level</div>
               <div class="dash-content">{{academic_level}}</div>
-            </div>
+            </div>-->
             <div class="dash-item">
               <div class="dash-label">Appl Fee Status</div>
               <div class="dash-content">{{application_fee_status}}</div>
@@ -111,7 +107,11 @@
             </div>
             <div class="dash-item">
               <div class="dash-label">Application Complete</div>
-              <div class="dash-content">{% if application_complete == 1 %}Yes{% elsif application_complete == 0 %}No{% else %}{{application_complete}}{% endif %}</div>
+              <div class="dash-content">{{application_complete}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Completed Date</div>
+              <div class="dash-content">{{complete_date}}</div>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@
             </div>
             <div class="dash-item">
               <div class="dash-label">Related to Alumni</div>
-              <div class="dash-content">{% if alumni_dependent == 1 %}Yes{% elsif alumni_dependent == 0 %}No{% else %}{{alumni_dependent}}{% endif %}</div>
+              <div class="dash-content">{{alumni_dependent}}</div>
             </div>
             <div class="dash-item">
               <div class="dash-label">Alumni Relationship</div>
@@ -153,21 +153,19 @@
           <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Housing Application On File</div>
-              <div class="dash-content">{% if housing_app == 1 %}Yes{% elsif housing_app == 0 %}No{% else %}{{housing_app}}{% endif %}</div>
+              <div class="dash-content">{{housing_app}}</div>
             </div>
             <div class="dash-item">
               <div class="dash-label">Approved Housing Exemption On File</div>
-              <div class="dash-content">{% if housing_exempt == 1 %}Yes{% elsif housing_exempt == 0 %}No{% else %}{{housing_exempt}}{% endif %}</div>
+              <div class="dash-content">{{housing_exempt}}</div>
             </div>
             <div class="dash-item">
               <div class="dash-label">PeopleSoft Account Active</div>
-              <div class="dash-content">{% if ps_account_active == 1 %}Yes{% elsif ps_account_active == 0 %}No{% else %}{{ps_account_active}}{% endif %}</div>
+              <div class="dash-content">{{ps_account_active}}</div>
             </div>
             <div class="dash-item">
               <div class="dash-label">Advising Hold (Transfers), Summ/Fall 2019</div>
-              <div class="dash-content">
-                {% if adv_hold_fall_2019 == 1 %}Yes<br />{% elsif adv_hold_fall_2019 == 0 %}No<br />{{adv_hold_fall_2019}}<br />{% endif %}<br />&nbsp;
-              </div>
+              <div class="dash-content">{{adv_hold_fall_2019}}</div>
             </div>
             <div class="dash-item">
               <div class="dash-label">Enrolled Terms</div>
@@ -198,7 +196,7 @@
             </div>
             <div class="dash-item">
               <div class="dash-label">Transfer Orientation</div>
-              <div class="dash-content">{{trfdate | slice: 0, 10}}</div>
+              <div class="dash-content">{{trfdate}}</div>
             </div>
           </div>
         </div>
