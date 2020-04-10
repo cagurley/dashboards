@@ -10,7 +10,7 @@
   <body>
     <div class="dash">
       <div class="dash-section">
-        <h3 class="dash-header"></h3>
+        <h3 class="dash-header">Core Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -21,10 +21,24 @@
               <div class="dash-label">PeopleSoft Application Number</div>
               <div class="dash-content">{{adm_appl_nbr}}</div>
             </div>
+            <!--<div class="dash-item">
+              <div class="dash-label">Admit Type</div>
+              <div class="dash-content">{{admit_type}}</div>
+            </div>-->
+            <!--<div class="dash-item">
+              <div class="dash-label">Academic Level</div>
+              <div class="dash-content">{{academic_level}}</div>
+            </div>-->
             <div class="dash-item">
               <div class="dash-label">Admit Type Detailed</div>
               <div class="dash-content">{{admit_type_detailed}}</div>
             </div>
+            <div class="dash-item">
+              <div class="dash-label">Admit Term</div>
+              <div class="dash-content">{{admit_term}}</div>
+            </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Applied to Major</div>
               <div class="dash-content">{{major}}</div>
@@ -33,6 +47,8 @@
               <div class="dash-label">Applied to Program</div>
               <div class="dash-content">{{academic_program}}</div>
             </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">PeopleSoft Major</div>
               <div class="dash-content">{{peoplesoft_major}}</div>
@@ -41,22 +57,23 @@
               <div class="dash-label">PeopleSoft Program</div>
               <div class="dash-content">{{peoplesoft_program}}</div>
             </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item">
-              <div class="dash-label">Admit Term</div>
-              <div class="dash-content">{{admit_term}}</div>
-            </div>
-            <!--<div class="dash-item">
-              <div class="dash-label">Admit Type</div>
-              <div class="dash-content">{{admit_type}}</div>
-            </div>-->
-            <div class="dash-item">
-              <div class="dash-label">MUSIC</div>
+              <div class="dash-label">Instrument Type</div>
               <div class="dash-content">{{music_instrument_type}}</div>
             </div>
             <div class="dash-item">
               <div class="dash-label">Instrument</div>
               <div class="dash-content">{{music_classical_instrument}}{{music_jazz_instrument}}{{music_other_instrument}}</div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-section">
+        <h3 class="dash-header">Supplemental Data</h3>
+        <div class="dash-body">
+          <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Residency</div>
               <div class="dash-content">{{residency}}</div>
@@ -69,6 +86,8 @@
               <div class="dash-label">Residency Exception</div>
               <div class="dash-content">{{residency_exception}}</div>
             </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">GPA Requirement</div>
               <div class="dash-content">{{gpa_requirement}}</div>
@@ -77,34 +96,8 @@
               <div class="dash-label">Hours Restriction</div>
               <div class="dash-content">{{hours_restriction}}</div>
             </div>
-            <div class="dash-item">
-              <div class="dash-label">Last Updated</div>
-              <div class="dash-content">{{updated}}</div>
-            </div>
-            <!--<div class="dash-item">
-              <div class="dash-label">Academic Level</div>
-              <div class="dash-content">{{academic_level}}</div>
-            </div>-->
-            <div class="dash-item">
-              <div class="dash-label">Appl Fee Status</div>
-              <div class="dash-content">{{application_fee_status}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Military</div>
-              <div class="dash-content">{{military_veteran}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Military Dependent Benefits</div>
-              <div class="dash-content">{{military_dependent}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Military Connection</div>
-              <div class="dash-content">{{military_connected}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Campus Email</div>
-              <div class="dash-content">{{campus_email}}</div>
-            </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Application Complete</div>
               <div class="dash-content">{{application_complete}}</div>
@@ -113,11 +106,91 @@
               <div class="dash-label">Completed Date</div>
               <div class="dash-content">{{complete_date}}</div>
             </div>
+            <div class="dash-item">
+              <div class="dash-label">Appl Fee Status</div>
+              <div class="dash-content">{{application_fee_status}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Last Updated</div>
+              <div class="dash-content">{{updated}}</div>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">Application Populations</div>
+              <div class="dash-content">{{population}}</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="dash-section">
-        <h3 class="dash-header"></h3>
+        <h3 class="dash-header">Related Data</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">Scholarship Student Group</div>
+              <div class="dash-content">{{schol_stdgrp}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Scholarship Group Effective Date</div>
+              <div class="dash-content">{{schol_effdt}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Honors Decision</div>
+              <div class="dash-content">{{honors_decision}}</div>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">Orientation</div>
+              <div class="dash-content">{{orientation}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">SOSer</div>
+              <div class="dash-content">{{SOSer-Assignment}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Transfer Orientation</div>
+              <div class="dash-content">{{trfdate}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-section">
+        <h3 class="dash-header">External Data</h3>
+        <div class="dash-body">
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">Housing Application On File</div>
+              <div class="dash-content">{{housing_app}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Approved Housing Exemption On File</div>
+              <div class="dash-content">{{housing_exempt}}</div>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">Campus Email</div>
+              <div class="dash-content">{{campus_email}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">PeopleSoft Account Active</div>
+              <div class="dash-content">{{ps_account_active}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Enrolled Terms</div>
+              <div class="dash-content">{{enrolled_terms}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Advising Hold (Transfers)</div>
+              <div class="dash-content">{{adv_hold_fall_2019}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-section">
+        <h3 class="dash-header">Self-Reported Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -136,6 +209,22 @@
               <div class="dash-label">College GPA Self Reported</div>
               <div class="dash-content">{{college_gpa_self_reported}}</div>
             </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">Military</div>
+              <div class="dash-content">{{military_veteran}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Military Dependent Benefits</div>
+              <div class="dash-content">{{military_dependent}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Military Connection</div>
+              <div class="dash-content">{{military_connected}}</div>
+            </div>
+          </div>
+          <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Related to Alumni</div>
               <div class="dash-content">{{alumni_dependent}}</div>
@@ -143,82 +232,6 @@
             <div class="dash-item">
               <div class="dash-label">Alumni Relationship</div>
               <div class="dash-content">{{alumni_relationship}}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dash-section">
-        <h3 class="dash-header"></h3>
-        <div class="dash-body">
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">Housing Application On File</div>
-              <div class="dash-content">{{housing_app}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Approved Housing Exemption On File</div>
-              <div class="dash-content">{{housing_exempt}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">PeopleSoft Account Active</div>
-              <div class="dash-content">{{ps_account_active}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Advising Hold (Transfers), Summ/Fall 2019</div>
-              <div class="dash-content">{{adv_hold_fall_2019}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Enrolled Terms</div>
-              <div class="dash-content">{{enrolled_terms}}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dash-section">
-        <h3 class="dash-header"></h3>
-        <div class="dash-body">
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">Scholarship Student Group</div>
-              <div class="dash-content">{{schol_stdgrp}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Scholarship Group Effective Date</div>
-              <div class="dash-content">{{schol_effdt}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Orientation</div>
-              <div class="dash-content">{{orientation}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">SOSer</div>
-              <div class="dash-content">{{SOSer-Assignment}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Transfer Orientation</div>
-              <div class="dash-content">{{trfdate}}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dash-section">
-        <h3 class="dash-header"></h3>
-        <div class="dash-body">
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">Honors Decision</div>
-              <div class="dash-content">{{honors_decision}}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dash-section">
-        <h3 class="dash-header"></h3>
-        <div class="dash-body">
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">Application Populations</div>
-              <div class="dash-content">{{population}}</div>
             </div>
           </div>
         </div>
