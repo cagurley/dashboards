@@ -21,14 +21,6 @@
               <div class="dash-label">PS App Number</div>
               <div class="dash-content">{{adm_appl_nbr}}</div>
             </div>
-            <!--<div class="dash-item">
-              <div class="dash-label">Admit Type</div>
-              <div class="dash-content">{{admit_type}}</div>
-            </div>-->
-            <!--<div class="dash-item">
-              <div class="dash-label">Academic Level</div>
-              <div class="dash-content">{{academic_level}}</div>
-            </div>-->
             <div class="dash-item fxl-4">
               <div class="dash-label">Admit Type Detailed</div>
               <div class="dash-content">{{admit_type_detailed}}</div>
@@ -132,10 +124,6 @@
           </div>
           {% endif %}
           <div class="dash-row">
-            <!--<div class="dash-item">
-              <div class="dash-label">Application Complete</div>
-              <div class="dash-content">{{application_complete}}</div>
-            </div>-->
             <div class="dash-item">
               <div class="dash-label">App Fee Status</div>
               <div class="dash-content">{{application_fee_status}}</div>
@@ -267,10 +255,6 @@
               <div class="dash-label">Related to Alumni</div>
               <div class="dash-content">{{alumni_dependent}}</div>
             </div>
-            <!--<div class="dash-item">
-              <div class="dash-label">Alumni Relationship</div>
-              <div class="dash-content">{{alumni_relationship}}</div>
-            </div>-->
           </div>
         </div>
       </div>
@@ -283,182 +267,5 @@
       /*SCRIPT HERE*/
     /*]]>*/</script>-->
     <script type="text/javascript" src="dashboard.js"></script>
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td><strong>PeopleSoft Student ID</strong></td>
-          <td>{{emplid}}</td>
-          <td><strong>Slate ID</strong></td>
-          <td>{{ref}}</td>
-        </tr>
-        <tr>
-          <td><strong>PeopleSoft Application Number</strong></td>
-          <td>{{adm_appl_nbr}}</td>
-          <td colspan="2" rowspan="1"><strong>Admit Type Detailed:&nbsp;</strong>{{admit_type_detailed}}</td>
-        </tr>
-        <tr>
-          <td><strong>Applied to Major</strong></td>
-          <td>{{major}}</td>
-          <td><strong>Applied to Program</strong></td>
-          <td>{{academic_program}}</td>
-        </tr>
-        <tr>
-          <td><strong>PeopleSoft Major</strong></td>
-          <td>{{peoplesoft_major}}</td>
-          <td><strong>PeopleSoft Program</strong></td>
-          <td>{{peoplesoft_program}}</td>
-        </tr>
-        <tr>
-          <td><strong>Admit Term</strong></td>
-          <td>{{admit_term}}</td>
-          <td><strong>Admit Type</strong></td>
-          <td>{{admit_type}}</td>
-        </tr>
-        <tr>
-          <td><strong>Program Action</strong></td>
-          <td>{{program_action}}</td>
-          <td><strong>Action Reason</strong></td>
-          <td>{{action_reason}}</td>
-        </tr>
-        <tr>
-          <td><strong>MUSIC</strong></td>
-          <td>Instrument Type: {{music_instrument_type}}</td>
-          <td colspan="2" rowspan="1">Instrument: {{music_classical_instrument}}{{music_jazz_instrument}}{{music_other_instrument}}</td>
-        </tr>
-        <tr>
-          <td><strong>Residency</strong></td>
-          <td>{{residency}}</td>
-          <td><strong>Residency Country</strong></td>
-          <td>{{residency_country}}</td>
-        </tr>
-        <tr>
-          <td><strong>Residency County</strong></td>
-          <td>{{residency_county}}</td>
-          <td><strong>Residency State</strong></td>
-          <td>{{Residency_State}}</td>
-        </tr>
-        <tr>
-          <td><strong>Residency Exception</strong></td>
-          <td>{{residency_exception}}</td>
-          <td><br />
-          &nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td><strong>GPA Requirement</strong></td>
-          <td>{{gpa_requirement}}</td>
-          <td><strong>Hours Restriction:</strong></td>
-          <td>{{hours_restriction}}</td>
-        </tr>
-        <tr>
-          <td><strong>Last Updated</strong></td>
-          <td>{{updated}}</td>
-          <td><strong>Academic Level</strong></td>
-          <td>{{academic_level}}</td>
-        </tr>
-        <tr>
-          <td><strong>Appl Fee Status</strong></td>
-          <td>{{application_fee_status}}</td>
-          <td><strong>Military</strong></td>
-          <td>{{military_veteran}}</td>
-        </tr>
-        <tr>
-          <td><strong>Military Dependent Benefits</strong></td>
-          <td>{{military_dependent}}</td>
-          <td><strong>Military Connection</strong></td>
-          <td>{{military_connected}}</td>
-        </tr>
-        <tr>
-          <td><strong>Campus Email</strong></td>
-          <td>{{campus_email}}</td>
-          <td colspan="2" rowspan="1">&nbsp;</td>
-        </tr>
-        <tr>
-          <td><strong>Application Complete</strong></td>
-          <td>{% if application_complete == 1 %}Yes{% elsif application_complete == 0 %}No{% else %}{{application_complete}}{% endif %}</td>
-          <td><strong>Completed Date</strong></td>
-          <td>{{complete_date}}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td><strong>Self-Reported ACT</strong></td>
-          <td>{{act_self_reported}}</td>
-          <td><strong>Self-Reported SAT</strong></td>
-          <td>{{sat_self_reported}}</td>
-        </tr>
-        <tr>
-          <td><strong>Self-Reported HS GPA</strong></td>
-          <td>{{hs_gpa_self_reported}}</td>
-          <td><strong>College GPA Self Reported</strong></td>
-          <td>{{college_gpa_self_reported}}</td>
-        </tr>
-        <tr>
-          <td><strong>Related to Alumni</strong></td>
-          <td>{% if alumni_dependent == 1 %}Yes{% elsif alumni_dependent == 0 %}No{% else %}{{alumni_dependent}}{% endif %}</td>
-          <td><strong>Alumni Relationship</strong></td>
-          <td>{{alumni_relationship}}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td><strong>Housing Application On File</strong></td>
-          <td>{% if housing_app == 1 %}Yes{% elsif housing_app == 0 %}No{% else %}{{housing_app}}{% endif %}</td>
-          <td><strong>Approved Housing Exemption On File</strong></td>
-          <td style="vertical-align: middle;"><br />
-          {% if housing_exempt == 1 %}Yes{% elsif housing_exempt == 0 %}No{% else %}{{housing_exempt}}{% endif %}</td>
-        </tr>
-        <tr>
-          <td><strong>PeopleSoft Account Active</strong></td>
-          <td>{% if ps_account_active == 1 %}Yes{% elsif ps_account_active == 0 %}No{% else %}{{ps_account_active}}{% endif %}</td>
-          <td rowspan="1"><strong>Advising Hold (Transfers), Summ/Fall 2019</strong></td>
-          <td rowspan="1" style="vertical-align: middle;">{% if adv_hold_fall_2019 == 1 %}Yes<br />
-          {% elsif adv_hold_fall_2019 == 0 %}No<br />
-          {{adv_hold_fall_2019}}<br />
-          {% endif %}<br />
-          &nbsp;</td>
-        </tr>
-        <tr>
-          <td><strong>Enrolled Terms</strong></td>
-          <td>{{enrolled_terms}}</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td><strong>Scholarship Student Group</strong></td>
-          <td>{{schol_stdgrp}}</td>
-          <td><strong>Scholarship Group Effective Date</strong></td>
-          <td>{{schol_effdt}}</td>
-        </tr>
-        <tr>
-          <td colspan="2" rowspan="1"><strong>Orientation:</strong> {{orientation}}</td>
-          <td colspan="2" rowspan="1"><strong>SOSer:</strong> {{SOSer-Assignment}}</td>
-        </tr>
-        <tr>
-          <td colspan="4"><strong>Transfer Orientation:&nbsp;</strong>{{trfdate | slice: 0, 10}}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
-      <tbody>
-        <tr>
-          <td colspan="4"><strong>Honors Decision:</strong> {{honors_decision}}</td>
-        </tr>
-      </tbody>
-    </table>
-    <br />
-    <strong>Application Populations:&nbsp;</strong>{{population}}
   </body>
 </html>
