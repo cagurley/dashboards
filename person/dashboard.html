@@ -10,7 +10,7 @@
   <body>
     <div class="dash">
       <div class="dash-section">
-        <h3 class="dash-header">Prospect Info</h3>
+        <h3 class="dash-header" title="Display prospect info" tabindex="0">Prospect Info</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -46,7 +46,7 @@
       </div>
       {% if app1_guid %}
       <div class="dash-section">
-        <h3 class="dash-header">Top-Ranked App</h3>
+        <h3 class="dash-header" title="Display application info" tabindex="0">Top-Ranked App</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -82,7 +82,7 @@
       {% endif %}
       {% if school1_guid %}
       <div class="dash-section">
-        <h3 class="dash-header">Top-Ranked School</h3>
+        <h3 class="dash-header" title="Display school info" tabindex="0">Top-Ranked School</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -125,7 +125,7 @@
       </div>
       {% endif %}
       <div class="dash-section">
-        <h3 class="dash-header">Admissions Counselor</h3>
+        <h3 class="dash-header" title="Display counselor info" tabindex="0">Admissions Counselor</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item fsl-6 fxl-3">
@@ -152,7 +152,7 @@
         </div>
       </div>
       <div class="dash-section">
-        <h3 class="dash-header">Contact</h3>
+        <h3 class="dash-header" title="Display contact info" tabindex="0">Contact</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -195,7 +195,7 @@
       </div>
       {% if act_exists %}
       <div class="dash-section" id="dash-act">
-        <h3 class="dash-header">Max Verified ACT Components</h3>
+        <h3 class="dash-header" title="Display ACT info" tabindex="0">Max Verified ACT Components</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -231,7 +231,7 @@
       {% endif %}
       {% if satr_exists %}
       <div class="dash-section" id="dash-satr">
-        <h3 class="dash-header">Max Verified SAT Components</h3>
+        <h3 class="dash-header" title="Display SAT info" tabindex="0">Max Verified SAT Components</h3>
         <div class="dash-row">
           <div class="dash-item">
             <a href="/manage/lookup/record?id={{id|url_encode}}&tab=Profile%2fScores">Jump to Scores</a>
