@@ -10,7 +10,7 @@
   <body>
     <div class="dash">
       <div class="dash-section">
-        <h3 class="dash-header">Core Data</h3>
+        <h3 class="dash-header" title="Display core data" tabindex="0">Core Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item fsl-6 fxl-3">
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="dash-section">
-        <h3 class="dash-header">Supplemental Data</h3>
+        <h3 class="dash-header" title="Display supplemental data" tabindex="0">Supplemental Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -124,11 +124,11 @@
           </div>
           {% endif %}
           <div class="dash-row">
-            <div class="dash-item">
+            <div class="dash-item fsl-3">
               <div class="dash-label">App Fee Status</div>
               <div class="dash-content">{{application_fee_status}}</div>
             </div>
-            <div class="dash-item">
+            <div class="dash-item fsl-4">
               <div class="dash-label">App Completion Date</div>
               <div class="dash-content">{{complete_date}}</div>
             </div>
@@ -146,40 +146,54 @@
         </div>
       </div>
       <div class="dash-section">
-        <h3 class="dash-header">Related Data</h3>
+        <h3 class="dash-header" title="Display self-reported data" tabindex="0">Self-Reported Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
-              <div class="dash-label">Scholarship Student Group</div>
-              <div class="dash-content">{{schol_stdgrp}}</div>
+              <div class="dash-label">ACT Composite</div>
+              <div class="dash-content">{{act_self_reported}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">Scholarship Group Eff Date</div>
-              <div class="dash-content">{{schol_effdt}}</div>
+              <div class="dash-label">SAT Total</div>
+              <div class="dash-content">{{sat_self_reported}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">Honors Decision</div>
-              <div class="dash-content">{{honors_decision}}</div>
+              <div class="dash-label">High School GPA</div>
+              <div class="dash-content">{{hs_gpa_self_reported}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">College GPA</div>
+              <div class="dash-content">{{college_gpa_self_reported}}</div>
             </div>
           </div>
           <div class="dash-row">
             <div class="dash-item">
-              <div class="dash-label">Orientation</div>
-              <div class="dash-content">{{orientation}}</div>
+              <div class="dash-label">Military Status</div>
+              <div class="dash-content">{{military_status}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">SOSer</div>
-              <div class="dash-content">{{SOSer-Assignment}}</div>
+              <div class="dash-label">Military Dependent</div>
+              <div class="dash-content">{{military_dependent}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">Transfer Orientation</div>
-              <div class="dash-content">{{trfdate}}</div>
+              <div class="dash-label">Military Connection</div>
+              <div class="dash-content">{{military_connected}}</div>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-item">
+              <div class="dash-label">Alumni Dependent</div>
+              <div class="dash-content">{{alumni_dependent}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">Does Not Intend to Enroll</div>
+              <div class="dash-content">{{dnie}}</div>
             </div>
           </div>
         </div>
       </div>
       <div class="dash-section">
-        <h3 class="dash-header">External Data</h3>
+        <h3 class="dash-header" title="Display external data" tabindex="0">External Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
@@ -192,7 +206,7 @@
             </div>
           </div>
           <div class="dash-row">
-            <div class="dash-item">
+            <div class="dash-item fsm-6 flg-3">
               <div class="dash-label">Campus Email</div>
               <div class="dash-content">
                 <a class="dash-popem break-all" href="#" data-href="/manage/lookup/message?cmd=compose&person={{person|url_encode}}&recipient={{campus_email|url_encode}}" onclick="return (FW.Lazy.Popup(this));">
@@ -200,7 +214,7 @@
                 </a>
               </div>
             </div>
-            <div class="dash-item">
+            <div class="dash-item fsm-6 flg-3">
               <div class="dash-label">PS Account Active</div>
               <div class="dash-content">{{ps_account_active}}</div>
             </div>
@@ -216,44 +230,36 @@
         </div>
       </div>
       <div class="dash-section">
-        <h3 class="dash-header">Self-Reported Data</h3>
+        <h3 class="dash-header" title="Display related data" tabindex="0">Related Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
-              <div class="dash-label">Self-Reported ACT</div>
-              <div class="dash-content">{{act_self_reported}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Self-Reported SAT</div>
-              <div class="dash-content">{{sat_self_reported}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Self-Reported HS GPA</div>
-              <div class="dash-content">{{hs_gpa_self_reported}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">College GPA Self Reported</div>
-              <div class="dash-content">{{college_gpa_self_reported}}</div>
+              <div class="dash-label">Recruiting Region</div>
+              <div class="dash-content">{{region}}</div>
             </div>
           </div>
           <div class="dash-row">
             <div class="dash-item">
-              <div class="dash-label">Military Status</div>
-              <div class="dash-content">{{military_status}}</div>
+              <div class="dash-label">Scholarship Group</div>
+              <div class="dash-content">{{schol_stdgrp}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">Military Dependent Benefits</div>
-              <div class="dash-content">{{military_dependent}}</div>
+              <div class="dash-label">Scholarship Eff Date</div>
+              <div class="dash-content">{{schol_effdt}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">Military Connection</div>
-              <div class="dash-content">{{military_connected}}</div>
+              <div class="dash-label">Honors Decision</div>
+              <div class="dash-content">{{honors_decision}}</div>
             </div>
           </div>
           <div class="dash-row">
             <div class="dash-item">
-              <div class="dash-label">Related to Alumni</div>
-              <div class="dash-content">{{alumni_dependent}}</div>
+              <div class="dash-label">Orientation Date</div>
+              <div class="dash-content">{{orndate}}{{trfdate}}</div>
+            </div>
+            <div class="dash-item">
+              <div class="dash-label">SOSer</div>
+              <div class="dash-content">{{soser}}</div>
             </div>
           </div>
         </div>

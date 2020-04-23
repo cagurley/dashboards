@@ -4,14 +4,19 @@ $('.dash-content').each(function () {
     $(this).html('<em>none</em>');
   }
 });
-$('.dash-header').click(function () { $(this).next().toggle(); });
-$('.dash-header').on('mouseover mouseout', function () {
-  $(this).parent().toggleClass('dash-ic');
+$('.dash-header').on('click keypress', function () { $(this).next().toggle(); });
+$('.dash-header').on('mouseover focusin', function () {
+  $(this).parent().addClass('dash-ic');
 });
-$('.dash-header').on('mousedown mouseup', function () {
-  $(this).parent().toggleClass('dash-tl');
+$('.dash-header').on('mouseout focusout', function () {
+  $(this).parent().removeClass('dash-ic');
 });
-$('#dash-recdet .dash-body').hide();
+$('.dash-header').on('mousedown', function () {
+  $(this).parent().addClass('dash-tl');
+});
+$('.dash-header').on('mouseup', function () {
+  $(this).parent().removeClass('dash-tl');
+});
 if (window.matchMedia('(max-width: 575px)').matches) {
   var re = /^\/manage\/lookup\/message\?cmd=compose&person=.+?&recipient=(.+?)(&.+)?$/;
   $('.dash-popph').each(function () {
