@@ -1,25 +1,25 @@
 'use strict';
-$('.dash-content').each(function () {
+$('#pdash * .dash-content').each(function () {
   if (!$(this).text()) {
     $(this).html('<em>none</em>');
   }
 });
-$('.dash-header').on('click keypress', function () { $(this).next().toggle(); });
-$('.dash-header').on('mouseover focusin', function () {
+$('#pdash * .dash-header').on('click keypress', function () { $(this).next().toggle(); });
+$('#pdash * .dash-header').on('mouseover focusin', function () {
   $(this).parent().addClass('dash-ic');
 });
-$('.dash-header').on('mouseout focusout', function () {
+$('#pdash * .dash-header').on('mouseout focusout', function () {
   $(this).parent().removeClass('dash-ic');
 });
-$('.dash-header').on('mousedown', function () {
+$('#pdash * .dash-header').on('mousedown', function () {
   $(this).parent().addClass('dash-tl');
 });
-$('.dash-header').on('mouseup', function () {
+$('#pdash * .dash-header').on('mouseup', function () {
   $(this).parent().removeClass('dash-tl');
 });
 if (window.matchMedia('(max-width: 575px)').matches) {
   var re = /^\/manage\/lookup\/message\?cmd=compose&person=.+?&recipient=(.+?)(&.+)?$/;
-  $('.dash-popph').each(function () {
+  $('#pdash * .dash-popph').each(function () {
     var matches = $(this).attr('data-href').match(re);
     if (matches[1]) {
       $(this).removeAttr('onclick');
@@ -27,7 +27,7 @@ if (window.matchMedia('(max-width: 575px)').matches) {
       $(this).removeAttr('data-href');
     }
   });
-  $('.dash-popem').each(function () {
+  $('#pdash * .dash-popem').each(function () {
     var matches = $(this).attr('data-href').match(re);
     if (matches[1]) {
       $(this).removeAttr('onclick');
