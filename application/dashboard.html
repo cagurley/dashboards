@@ -10,7 +10,7 @@
   <body>
     <div class="dash" id="adash">
       <div class="dash-section">
-        <h3 class="dash-header" title="Display core data" tabindex="0">Core Data</h3>
+        <h3 class="dash-header" title="Display core data" tabindex="0">App Data</h3>
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item fsl-6 fxl-3">
@@ -83,10 +83,24 @@
         <div class="dash-body">
           <div class="dash-row">
             <div class="dash-item">
+              <div class="dash-label">Recruiting Region</div>
+              <div class="dash-content">{{region}}</div>
+            </div>
+            <div class="dash-item fsl-2">
+              <div class="dash-label">Fee Status</div>
+              <div class="dash-content">{{application_fee_status}}</div>
+            </div>
+            <div class="dash-item fsl-4">
+              <div class="dash-label">App Completion Date</div>
+              <div class="dash-content">{{complete_date}}</div>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-item">
               <div class="dash-label">Residency Status</div>
               <div class="dash-content">{{residency}}</div>
             </div>
-            <div class="dash-item fsl-3">
+            <div class="dash-item fsl-4">
               <div class="dash-label">Residency Country</div>
               <div class="dash-content">{{residency_country}}</div>
             </div>
@@ -137,20 +151,6 @@
             </div>
           </div>
           {% endif %}
-          <div class="dash-row">
-            <div class="dash-item fsl-3">
-              <div class="dash-label">App Fee Status</div>
-              <div class="dash-content">{{application_fee_status}}</div>
-            </div>
-            <div class="dash-item fsl-4">
-              <div class="dash-label">App Completion Date</div>
-              <div class="dash-content">{{complete_date}}</div>
-            </div>
-            <div class="dash-item">
-              <div class="dash-label">Last Updated</div>
-              <div class="dash-content">{{updated}}</div>
-            </div>
-          </div>
           <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Application Populations</div>
@@ -215,7 +215,7 @@
               <div class="dash-content">{{housing_app}}</div>
             </div>
             <div class="dash-item">
-              <div class="dash-label">Approved Housing Exemption On File</div>
+              <div class="dash-label">Approved Housing Exemption</div>
               <div class="dash-content">{{housing_exempt}}</div>
             </div>
           </div>
@@ -246,12 +246,6 @@
       <div class="dash-section">
         <h3 class="dash-header" title="Display related data" tabindex="0">Related Data</h3>
         <div class="dash-body">
-          <div class="dash-row">
-            <div class="dash-item">
-              <div class="dash-label">Recruiting Region</div>
-              <div class="dash-content">{{region}}</div>
-            </div>
-          </div>
           <div class="dash-row">
             <div class="dash-item">
               <div class="dash-label">Scholarship Group</div>
